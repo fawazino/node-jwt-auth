@@ -28,6 +28,6 @@
   },
   "homepage": "https://github.com/iamshaunjp/node-express-jwt-auth#readme",
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    
   }
 }
