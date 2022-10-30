@@ -1,8 +1,8 @@
 name: Deploy
 on:
   push:
-    branches:
-    - master
+    branches: [master]
+
 jobs:
   deploy:
      runs-on: ubuntu-latest
@@ -11,5 +11,6 @@ jobs:
         uses: digitalocean/action-doctl@v2.2.0
         with:
            token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-    
+      - name: Save DigitalOcean kubeconfig
+        run: doctl kubernetes cluster kubeconfig save testing-cluster
 
