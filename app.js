@@ -27,4 +27,4 @@ app.get('/smoothies', requireAuth, (req, res) => res.render('smoothies'));
 app.use(authRoutes)
 
 
-app.listen(3000, ()=>{console.log('server running on port', port);})
+app.listen(port, ()=>{console.log('server running on port', port);})
